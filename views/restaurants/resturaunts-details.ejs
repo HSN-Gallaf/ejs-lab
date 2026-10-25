@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restaurant Details</title>
+    <link rel="stylesheet" href="../resturaunt-details-style.css">
+  </head>
+  <body>
+    <%- include('../partials/navbar') %>
+
+    <p><%= restaurant.name %></p>
+    <p><%= restaurant.address %></p>
+
+    <% for(let item of restaurant.menu) { %>
+      <p>Name: <%= item.name %></p>
+      <p>Price: <%= item.price %></p>
+      <p>Rating: <%= item.rating %></p>
+      <p>-------------</p>
+      <% } %>
+  </body>
+</html>
